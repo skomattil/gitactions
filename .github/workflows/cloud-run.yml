@@ -34,13 +34,12 @@ jobs:
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
         version: '290.0.1'
-        service_account_key: ${{ secrets.RUN_SA_KEY }}
+        service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         project_id: ${{ secrets.RUN_PROJECT }}
 
     # Build and push image to Google Container Registry
     - name: Build
       run: |-
-        gcloud config set account skomattil@woolworths.com.au
         gcloud builds submit \
           --quiet \
           --tag "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
