@@ -41,7 +41,7 @@ jobs:
     - name: Build
       run: |-
         gcloud builds submit \
-          --gcloud config set account skomattil@woolworths.com.au \
+          --gcloud config set account skomattil@woolworths.com.au
           --quiet \
           --tag "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
     # Deploy image to Cloud Run
