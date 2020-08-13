@@ -18,8 +18,8 @@ on: [push]
 
 env:
   PROJECT_ID: ${{ secrets.RUN_PROJECT }}
-  RUN_REGION: us-central1
-  SERVICE_NAME: helloworld-nodejs
+  RUN_REGION: australia-southeast1-b
+  SERVICE_NAME: helloworld
 
 jobs:
   setup-build-deploy:
