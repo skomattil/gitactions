@@ -40,8 +40,8 @@ jobs:
     # Build and push image to Google Container Registry
     - name: Build
       run: |-
+        gcloud config set account skomattil@woolworths.com.au
         gcloud builds submit \
-          --gcloud config set account skomattil@woolworths.com.au
           --quiet \
           --tag "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
     # Deploy image to Cloud Run
