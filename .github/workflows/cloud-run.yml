@@ -37,7 +37,7 @@ jobs:
         service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         project_id: ${{ secrets.RUN_PROJECT }}
 
-    # Build and push image to Google Container Registry 
+    # Build and push image to Google Container Registry  
     - name: Build
       run: |-
         gcloud builds submit \
