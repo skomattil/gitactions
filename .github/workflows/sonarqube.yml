@@ -1,0 +1,13 @@
+on: push
+name: Main Workflow
+jobs:
+  sonarQubeTrigger:
+    name: SonarQube Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: SonarQube Scan
+      uses: kitabisa/sonarqube-action@master
+      with:
+        host: https://js-giftcards.woolworths.com.au/
+        login: bce2c83b39c676b099e5b8661abab10d9d2a51aa
